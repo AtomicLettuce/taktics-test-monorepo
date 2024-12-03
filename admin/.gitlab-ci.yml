@@ -1,0 +1,39 @@
+stages:
+  - deploy
+
+deploy pre:
+  stage: deploy
+
+  script:
+    - git config --global url."https://".insteadOf git:// # A partir del 15/03/2022 se cambió el método de obtener dependencias de github. Ver https://github.blog/2021-09-01-improving-git-protocol-security-github/
+    - npm install
+    - npm run pre
+    - rm -rf /var/www/eureka/*
+    - mv build/* /var/www/eureka/
+  environment:
+    name: preproduction
+    url: https://pre.eurekacloud.es
+  when: manual
+  tags:
+    - pre
+    - front
+    - aws
+
+deploy pro:
+  stage: deploy
+
+  script:
+    - git config --global url."https://".insteadOf git:// # A partir del 15/03/2022 se cambió el método de obtener dependencias de github. Ver https://github.blog/2021-09-01-improving-git-protocol-security-github/
+    - npm ci
+    - npm run pro
+    - rm -rf /var/www/eureka/*
+    - mv build/* /var/www/eureka/
+  only:
+    - master
+  when: manual
+  environment:
+    name: production
+    url: https://admin.eurekacloud.es
+  tags:
+    - eureka
+    - pro

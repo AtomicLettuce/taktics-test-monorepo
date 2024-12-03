@@ -1,0 +1,45 @@
+<div class="card">
+  <div>
+    <div class="brand-logo">
+      <img src="../../../../img/Logotipo.png" />
+    </div>
+    <form
+      class="form-floating card-content form-group"
+      ng-submit="vm.doRemember()"
+      ng-show="!vm.rememberSuccess"
+    >
+      <h2 class="text-center">
+        {{'remember.title' | translate}}
+      </h2>
+      <p>
+        {{'remember.text' | translate}}
+      </p>
+
+      <label class="m-b-5 m-t-20">{{'general.email' | translate}}</label>
+      <input
+        type="text"
+        class="form-control"
+        ng-model="vm.email"
+        pattern-err-type="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        required
+      />
+
+      <div class="m-t-20 row">
+        <div class="col-md-6 text-center">
+          <a ui-sref="login" class="btn btn-default">{{'general.actions.goLogin' | translate}}</a>
+        </div>
+        <div class="col-md-6">
+          <input type="submit" class="btn btn-primary btn-login" value="{{'remember.action' | translate}}" />
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="card-content" ng-show="vm.rememberSuccess">
+    <p>{{'remember.messageSuccess' | translate}}</p>
+    <p class="text-center p-t-20">
+      <a ui-sref="login" class="btn btn-default">{{'general.actions.goLogin' | translate}}</a>
+    </p>
+  </div>
+</div>

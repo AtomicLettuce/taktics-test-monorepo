@@ -1,0 +1,45 @@
+{
+  "name": "Personnel",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "replaceOnPUT": false,
+  "mixins": {},
+  "properties": {
+    "name":  { "type": "string"},
+    "email": { "type": "string" }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$unauthenticated",
+      "permission": "DENY"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": [
+        "login",
+        "logout",
+        "patchOrCreate",
+        "changePassword",
+        "resetPassword",
+        "create"
+      ]
+    }
+  ],
+  "methods": {}
+}

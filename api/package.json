@@ -1,0 +1,44 @@
+{
+  "name": "eureka-backend",
+  "version": "1.0.0",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development nodemon -w common -w server",
+    "debug": "cross-env NODE_ENV=development nodemon -w common -w server --inspect --preserve-symlinks",
+    "angular": "lb-ng server/server.js ../admin/src/app/assets/js/common/services/lb-services.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . -f"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "compression": "^1.0.3",
+    "cors": "^2.5.2",
+    "cron": "^1.2.1",
+    "helmet": "^1.3.0",
+    "lodash": "^4.16.6",
+    "loopback": "3.6.0",
+    "loopback-boot": "^2.6.5",
+    "loopback-component-explorer": "^2.4.0",
+    "loopback-component-passport": "^2.3.0",
+    "loopback-component-storage": "^1.9.2",
+    "loopback-connector-rest": "^2.1.0",
+    "loopback-context": "^1.0.0",
+    "multiparty": "^4.2.3",
+    "strong-error-handler": "^1.0.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^8.23.1",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "loopback-sdk-angular-cli": "^3.3.1",
+    "nodemon": "^2.0.18",
+    "prettier": "2.7.1"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "license": "UNLICENSED",
+  "description": "eureka-backend"
+}

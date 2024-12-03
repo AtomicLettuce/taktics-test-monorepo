@@ -1,0 +1,651 @@
+html {
+  .dropdown-menu {
+    top: 105px !important;
+    background: white;
+  }
+
+  .underline {
+    border-bottom: 0.1em currentColor solid;
+    padding-bottom: 3px;
+  }
+
+  .table-full tbody > tr.default-cursor > td {
+    cursor: default;
+  }
+
+  .small-cell {
+    width: 50px;
+  }
+  .large-cell {
+    width: 200px;
+  }
+
+  $detail-color: rgba(0, 0, 0, 0.4);
+  detail {
+    label {
+      font-size: 110%;
+      color: $detail-color;
+    }
+    p {
+      font-size: 150%;
+      border-bottom: 1px solid $detail-color;
+      min-height: 1.9em;
+    }
+    p.input-group {
+      font-size: 150%;
+      border-bottom: 1px solid $detail-color;
+      min-height: 1.9em;
+    }
+  }
+}
+
+.select2-container-multi .select2-choices {
+  cursor: pointer !important;
+}
+
+.forms-basic {
+  margin-top: 10px !important;
+
+  .page-header {
+    margin-bottom: 20px;
+    
+    .headIcon {
+      top:7px;
+    }
+  }
+
+  .well {
+    padding-bottom: 0;
+  }
+
+  .btn-primary.md-find-in-page {
+    font-size: 20px;
+    padding: 7px 10px;
+    line-height: 1;
+  }
+
+  // INPUTS AND LABELS
+  .textLabels {
+    input[type=text] {
+      height:42px;
+    }
+    h3 {
+      font-size:24px;
+      font-weight: 400;
+    }
+    .select2-results .select2-result-label{
+      font-size: 15px;
+      font-weight: normal;
+      }
+    .select2-choice {
+      color:#999;
+    }
+    .ui-select-container.select2 a {
+      font-size:14px;
+    }
+     label{
+      font-weight:normal!important;
+      font-size:17px;
+
+      li {
+        font-size: 15px;
+        font-weight: normal;
+        color:#999;
+      }
+      
+     
+      span {
+        font-size: 15px;
+        font-weight: normal;
+        color:#999;
+      }
+      
+    }
+    ::placeholder{
+      font-size:14px;
+      color:#999;
+    }
+    .btn-default,.ui-select-container.select2,.form-control,.control-label,.form-group {
+      border-radius: 10px;
+     
+    }
+    .btn-default:hover,.ui-select-container.select2:hover,.form-control:hover:enabled,.control-label:hover:enabled, input:hover:enabled,textarea:hover {
+      -webkit-box-shadow: 0px 0px 17px -12px #000000!important; 
+      box-shadow: 0px 0px 17px -12px #000000!important;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+  }
+}
+
+.angular-google-map-container {
+  height: 120px !important;
+  margin-bottom: 15px;
+}
+
+select.form-control,
+input.form-control,
+textarea.form-control,
+div.ui-select-container {
+  border: 1px solid #ccc !important;
+  padding-left: 15px !important;
+  box-shadow: none !important;
+  background-position: right 15px center !important;
+}
+
+select.form-control:focus,
+input.form-control:focus,
+textarea.form-control,
+div.ui-select-container:focus {
+  box-shadow: none !important;
+}
+
+div.ui-select-container div.ui-select-dropdown {
+  margin-top: 0px;
+  margin-left: -16px;
+  border: 1px solid #ccc;
+}
+
+.table-condensed > thead > tr > th,
+.table-condensed > thead > tr > td,
+.table-condensed > tbody > tr > th,
+.table-condensed > tbody > tr > td,
+.table-condensed > tfoot > tr > th,
+.table-condensed > tfoot > tr > td {
+  vertical-align: middle !important;
+}
+
+.no-rp {
+  padding-right: 5px !important;
+}
+
+.tab-template-class {
+  margin-top: 30px;
+}
+
+html detail p {
+  border-bottom: 0 !important;
+}
+
+.form-group textarea {
+  border: 1px solid #ccc !important;
+  box-shadow: none !important;
+  padding: 3px 10px;
+}
+
+.select2-container.select2-container-disabled .select2-choice {
+  background-color: white !important;
+  border: none !important;
+}
+
+.attached-files-list {
+  margin-top: 40px !important;
+}
+
+.attached-file {
+  padding-left: 0 !important;
+}
+.attached-file:first-child {
+  border-top: 20px solid transparent !important;
+}
+
+p.editable-detail {
+  border: 1px solid #ccc !important;
+  line-height: 35px;
+}
+
+.select2-container-multi.select2-container-disabled .select2-choices {
+  background: white !important;
+  border: none !important;
+}
+
+.aside {
+  width: 850px !important;
+  max-width: 850px !important;
+  .buttons {
+    display:flex;
+    justify-content:flex-end;
+  }
+  .btn-forms {
+    width:220px;
+    justify-content:center;
+    font-size:12px;
+  }
+}
+
+div.not-chief-select .ui-select-container {
+  height: 130px;
+  max-height: 130px !important;
+  overflow-y: scroll;
+}
+
+.ui-select-match-item {
+  background-color: #e9e9e9 !important;
+}
+
+.not-chief-select .ui-select-container .select2-choices {
+  height: 100% !important;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+p.vacationFullName {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3;
+}
+
+.form-floating .help-block {
+  margin-bottom: 0 !important;
+}
+
+div single-select div label {
+  bottom: 0;
+  color: #666 !important;
+}
+
+.select2-search-field {
+  display: none !important;
+}
+
+.iconPreview {
+  width: 15px;
+  height: 15px;
+  margin-right: 12px;
+  padding-top: 2px;
+}
+
+#personnelTable .table-full td {
+  min-width: 100px;
+}
+
+.table-absences table thead {
+  tr:nth-child(1) {
+    border-top: 1px solid lightgrey;
+  }
+
+  tr:nth-child(2) {
+    th {
+      border-bottom: 1px solid lightgrey;
+      text-align: center;
+    }
+    th:nth-child(1),
+    th:nth-child(2) {
+      padding: 30px !important;
+    }
+  }
+}
+
+.reschedule-wo-modal {
+  height: 600px;
+
+  .modal-body {
+    height: 90%;
+
+    .container-fluid {
+      height: 100%;
+
+      .row {
+        height: 100%;
+
+        .col-md-6 {
+          height: 90%;
+        }
+      }
+    }
+  }
+}
+
+// OVERWRITE COMPONENTS
+// NG-DROPDOWN-MULTISELECT
+button.dropdown-toggle {
+  border-radius: 0;
+  border: 1px solid #ccc;
+  box-shadow: none;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: inherit;
+  font-size: 14px;
+  color: #999;
+
+  &:hover {
+    background: white;
+    box-shadow: none;
+  }
+}
+.open > .btn-default.dropdown-toggle,
+.open > .btn-default.dropdown-toggle:hover {
+  background-color: white;
+  box-shadow: none;
+}
+
+// UI-SELECT
+.ui-select-container .select2-choice {
+  font-size: 14px;
+}
+
+.ui-select-dropdown .select2-results .select2-highlighted {
+      background-color:$eureka-green-darken;
+}
+
+// BTN-LINK
+button.btn-link:not(.btn-inactive) {
+  color: $eureka-button-primary;
+
+  &:focus,
+  &:hover {
+    background: #fff;
+    color: $eureka-button-primary;
+  }
+}
+
+button.btn-link {
+  color: #9b9b9b;
+
+  &:focus {
+    color: #9b9b9b;
+    background: #fff;
+  }
+
+  &:hover {
+    background: #fff;
+    color: #3a3a3a;
+  }
+}
+
+// DEFAULT LAYOUT MAIN-CONTENT
+@mixin header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    > .btn {
+      margin-left: 10px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.btn-login {
+  background-color: #f39200;
+  border: 2px solid #ef9b00;
+  border-radius: 8px;
+
+  &:hover {
+    background-color: #fff;
+    color: #f39200;
+  }
+  &:active {
+    background-color: #fff;
+    color: #f39200;
+  }
+  &:focus {
+    background-color: #fff;
+    color: #f39200;
+  }
+}
+
+body:not(.detailForm) > main .forms-basic > .row.page-header:first-child {
+  margin: 30px 20px !important;
+}
+
+body:not(.detailForm) > main .main-container .main-content > section.forms-basic {
+  margin: 0 !important;
+  padding: 0;
+  width: calc(100% - 1px);
+
+  .page-header {
+    margin: 20px 30px;
+    @include header;
+
+    .btn-eureka:nth-last-child(2) {
+      background: #409ae7;
+    }
+
+    .btn-eureka:nth-last-child(3) {
+      background: #6d5b97;
+    }
+
+    .btn-eureka:nth-last-child(4) {
+      background: #dcedc8;
+    }
+  }
+
+  .card .row,
+  > .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.filter-header {
+  @include header;
+}
+
+i.md.md-rotate {
+  transform: rotate(180deg);
+}
+
+.btn-eureka {
+  min-width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  i {
+    margin-left: 20px;
+  }
+}
+
+$golden-color: #6d5b97;
+
+a.golden,
+button.golden {
+  background: $golden-color;
+  color: white;
+
+  &:hover {
+    background: $golden-color;
+    color: white;
+  }
+}
+
+.eureka-text {
+  &.golden {
+    color: $golden-color;
+    font-weight: bold;
+  }
+
+  &.pointer {
+    transition: opacity 0.5s ease;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.6;
+    }
+  }
+}
+
+body.listForms main {
+  .forms-basic {
+    > .row:first-child {
+      margin: 10px 0 0 0 !important;
+    }
+
+    .table-full tbody > tr > td:first-child {
+      padding-left: 10px;
+    }
+  }
+}
+
+$tables: absences permissions ots works assets resources activities clients providers outsources
+  budgets stock templates;
+@each $table in $tables {
+  main .forms-basic.#{$table} .table-full-small tbody > tr > td:first-child {
+    padding-left: 10px;
+  }
+
+  main .forms-basic.#{$table} > .row:first-child {
+    margin: 20px 0 !important;
+  }
+}
+
+.eureka-tabs {
+  .nav-tabs > li > a:hover,
+  .nav-tabs > li > a:focus:hover,
+  .nav-tabs > li.active > a {
+    box-shadow: inset 0 -2px 0 $eureka-green;
+  }
+}
+.batches-tabs-style {
+  .nav-tabs > li > a:hover,
+  .nav-tabs > li > a:focus:hover,
+  .nav-tabs > li.active > a {
+    box-shadow: inset 0 -2px 0 $eureka-green;
+  }
+}
+.right-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  > .btn {
+    margin-left: 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.forms-basic.work-centers .checkbox input[type='checkbox'] {
+  &:checked:after {
+    background-color: $eureka-button-primary;
+    border-color: $eureka-button-primary;
+  }
+}
+
+.settings {
+  .section-title {
+    padding: 20px 0 20px 30px;
+    h2 {
+      color: #aaa;
+      margin: 0;
+    }
+  }
+
+  form {
+    background: #fff;
+    padding: 20px;
+    margin: 0;
+
+    .table-header > h3 {
+      color: #aaa;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+
+      .control-label {
+        color: #aaa;
+        font-size: 11px;
+        margin-bottom: 2px;
+      }
+      textarea.form-control {
+        min-height: 70px;
+      }
+      .form-control,
+      .ui-select-container.select2.select2-container {
+        font-size: 13px;
+        padding-left: 10px !important;
+        height: 30px;
+        border-radius: 2px;
+        color: #000;
+        background: #fff;
+
+        &[disabled] {
+          border: none !important;
+          cursor: initial;
+          color: inherit;
+          background: transparent;
+
+          a {
+            background: transparent;
+          }
+        }
+
+        a {
+          margin-top: -3px;
+        }
+      }
+      span.form-control {
+        box-shadow: none;
+      }
+    }
+  }
+
+  img.logo {
+    max-width: 300px;
+    max-height: 200px;
+  }
+}
+
+.main-container .forms-basic div.hide-label .form-group label.control-label,
+.main-container div.hide-label single-select .control-label {
+  display: none;
+}
+
+.batch-provider {
+  position: relative;
+  padding: 0 !important;
+  max-width: 150px;
+
+  .select2-drop {
+    width: 200px;
+  }
+}
+
+.stock-batch-icon {
+  position: absolute;
+  margin-top: -8px;
+  background: #f0f0f0;
+  border: 1px solid #999;
+  left: 0px;
+  top: 30%;
+  height: 100%;
+  line-height: 200%;
+  width: 30px;
+  text-align: start;
+  i {
+    margin-left: 8px;
+  }
+}
+
+i.icon-grey {
+  color: #777;
+}
+
+button.contasimple-invoice {
+  > img {
+    width: 20px !important;
+    height: 20px;
+  }
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 33%));
+  grid-gap: 20px;
+}

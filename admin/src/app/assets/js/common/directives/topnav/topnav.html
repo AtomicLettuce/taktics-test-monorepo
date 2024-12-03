@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default navbar-fixed-top" ng-class="{scroll: (scroll>10)}">
+  <div class="navbar__container">
+    <div class="navbar-header pull-left">
+      <button
+        type="button"
+        class="navbar-toggle pull-left m-15"
+        ng-model="theme.mobileAside"
+        ng-click="theme.mobileAside = !theme.mobileAside"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <ul class="breadcrumb uppercase">
+        <li>
+          <span class="eureka-text">Eurekacloud</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

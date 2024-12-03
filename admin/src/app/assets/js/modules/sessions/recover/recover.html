@@ -1,0 +1,48 @@
+<div class="card">
+  <div>
+    <div class="brand-logo">
+      <img src="../../../../img/Logotipo.png" />
+    </div>
+    <form
+      class="form-floating card-content form-group"
+      ng-submit="vm.doChange()"
+      ng-show="vm.personnelInfo && !vm.message"
+    >
+      <h2 class="text-center">
+        {{(vm.params.type === vm.types.activate ? 'recover.titleActivate' :
+        'recover.titleRemember') | translate}}
+      </h2>
+      <p>
+        {{vm.personnelInfo.name}}, {{(vm.params.type === vm.types.activate ?
+        'recover.textActivate' : 'recover.textRemember') | translate}}
+      </p>
+
+      <label class="m-b-5 m-t-20">{{'general.password' | translate}}</label>
+      <input type="password" class="form-control" ng-model="vm.password[1]" required />
+
+      <label class="m-b-5 m-t-20">{{'general.repeatPassword' | translate}}</label>
+      <input type="password" class="form-control" ng-model="vm.password[2]" required />
+
+      <div class="m-t-20 row">
+        <div class="col-md-6 text-center">
+          <a ui-sref="login" class="btn btn-default">{{'general.actions.goLogin' | translate}}</a>
+        </div>
+        <div class="col-md-6">
+          <input
+            type="submit"
+            class="btn btn-primary"
+            value="{{'general.actions.send' | translate}}"
+          />
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="card-content" ng-show="vm.message.title">
+    <p class="text-center">{{vm.message.title}}</p>
+    <p class="text-center p-t-10" ng-if="vm.message.extraInfo">{{vm.message.extraInfo}}</p>
+    <p class="text-center p-t-20" ng-show="vm.message.loaded">
+      <a ui-sref="login" class="btn btn-default">{{'general.actions.goLogin' | translate}}</a>
+    </p>
+  </div>
+</div>

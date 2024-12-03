@@ -1,0 +1,247 @@
+.table-small {
+  margin-bottom: 10px;
+
+  tbody > tr > td {
+    vertical-align: middle;
+    padding: 2px;
+    border-top: 1px solid #f9f9f9;
+
+    i {
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    &:first-child {
+      padding-left: 20px;
+    }
+    &:last-child {
+      padding-right: 20px;
+    }
+  }
+}
+
+main .forms-basic.budgets-index .table-full-small tbody > tr > td:first-child,
+main .forms-basic.budgets-index .table-full-small thead > tr > th:first-child {
+  padding-left: 15px;
+}
+
+main .forms-basic .table-full {
+  margin-bottom: 0px;
+  background: #fff;
+  width: 100%;
+
+  thead {
+    background: $eureka-grey;
+    tr > th {
+      vertical-align: bottom;
+      border-bottom: 1px solid #f0f0f0;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 11px;
+      color: $eureka-green;
+      .sort-indicator {
+        white-space: nowrap;
+        
+        &:before {
+          border-color:$eureka-green transparent;
+        }
+        &:after{
+          border-color:$eureka-green transparent;
+        }
+      }
+
+      input[type='checkbox'] {
+        width: 16px;
+        height: 16px;
+        margin: 0px;
+
+        &:after {
+          width: 19px;
+          height: 19px;
+          margin-top: 1px;
+          margin-left: 3px;
+        }
+      }
+    }
+  }
+
+  tbody > tr:not(.cursor-default) > td {
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  tbody, thead > tr {
+    td {
+      &.col-1 {
+        width: 1%;
+      }
+      &.col-2 {
+        width: 2%;
+      }
+      &.col-3 {
+        width: 3%;
+      }
+      &.col-5 {
+        width: 5%;
+      }
+      &.col-6 {
+        width: 6%;
+      }
+      &.col-7 {
+        width: 7%;
+      }
+      &.col-8 {
+        width: 8%;
+      }
+      &.col-10 {
+        width: 10%;
+      }
+      &.col-11 {
+        width: 11%;
+      }
+      &.col-12 {
+        width: 12%;
+      }
+      &.col-13 {
+        width: 13%;
+      }
+      &.col-15 {
+        width: 15%;
+      }
+      &.col-20 {
+        width: 20%;
+      }
+      &.col-25 {
+        width: 25%;
+      }
+      &.col-30 {
+        width: 30%;
+      }
+      &.col-35 {
+        width: 35%;
+      }
+      &.col-40 {
+        width: 40%;
+      }
+      &.col-45 {
+        width: 45%;
+      }
+      &.col-50 {
+        width: 50%;
+      }
+      &.col-55 {
+        width: 55%;
+      }
+      &.col-59 {
+        width: 59%;
+      }
+      &.col-60 {
+        width: 60%;
+      }
+    }
+  }
+  > td {
+    &:first-child {
+      padding-left: 40px;
+    }
+    &:last-child {
+      padding-right: 20px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  input[type='checkbox'] {
+    margin: 7px 0 0;
+
+    &:after {
+      border-color: #dbdbdb;
+    }
+    &:checked:after {
+      border-color:$eureka-button-primary;
+    }
+  }
+
+  .btn-round {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+  }
+
+  tbody tr:hover {
+    background-color: $eureka-green-lighten2;
+    .icon-color {
+      @include scale(1.05);
+      border-radius: 10px;
+    }
+  }
+
+  &-small {
+    thead tr > th:first-child {
+      padding-left: 20px;
+    }
+
+  }
+}
+
+.table-title {
+  padding: 20px 20px 20px 40px;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0px;
+  color: #9b9b9b;
+
+  &.normal {
+    padding: 20px;
+  }
+}
+
+.footer-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  .btn-footer {
+    @include animation(moveFromBottomFade 0.3s ease both);
+    position: relative !important;
+    display: inline-block !important;
+
+    &.ng-hide {
+      @include animation(moveToBottomFade 0.3s ease both);
+    }
+  }
+}
+
+@-webkit-keyframes moveFromBottomFade {
+  from {
+    opacity: 0;
+    @include translate(0, 100%);
+  }
+}
+@keyframes moveFromBottomFade {
+  from {
+    opacity: 0;
+    @include translate(0, 100%);
+  }
+}
+
+@-webkit-keyframes moveToBottomFade {
+  from {
+  }
+  to {
+    opacity: 0;
+    @include translate(0, 100%);
+  }
+}
+@keyframes moveToBottomFade {
+  from {
+  }
+  to {
+    opacity: 0;
+    @include translate(0, 100%);
+  }
+}
+
+

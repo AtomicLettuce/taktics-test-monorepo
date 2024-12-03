@@ -1,0 +1,15 @@
+<li>
+  <a ng-class="{ active: isSelected() }" href="{{href}}">
+    <div
+      data-placement="right"
+      data-title="{{name}}"
+      data-container="body"
+      bs-tooltip
+      class="sideBarIcon"
+    >
+      <i ng-if="icon" class="{{icon}}"></i>
+    </div>
+
+    <span ng-transclude class="tabName"></span>
+  </a>
+</li>

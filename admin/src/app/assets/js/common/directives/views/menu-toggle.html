@@ -1,0 +1,27 @@
+<li>
+  <a
+    href="#"
+    data-toggle="collapse"
+    data-target="#{{id}}"
+    aria-expanded="false"
+    aria-controls="{{id}}"
+    class="collapsible-header waves-effect"
+    ng-class="{active: isOpen()}"
+  >
+    <div
+      data-placement="right"
+      data-title="{{name}}"
+      data-container="body"
+      bs-tooltip
+      class="sideBarIcon"
+    >
+    <i
+    ng-if="icon"
+    class="{{icon}}"
+  ></i>
+    </div>
+
+    <span class="hide-nav-small tabName">{{name}}</span></a
+  >
+  <ul id="{{id}}" class="collapse" ng-class="{in: isOpen()}" ng-transclude></ul>
+</li>

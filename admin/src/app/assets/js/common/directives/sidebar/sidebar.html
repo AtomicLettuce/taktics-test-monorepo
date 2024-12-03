@@ -1,0 +1,48 @@
+<aside class="sidebar fixed">
+    <a
+        class="md change-nav"
+        ng-class="(!theme.navSmall ? 'md-keyboard-arrow-left' : 'md-keyboard-arrow-right')"
+        ng-click="theme.navSmall = !theme.navSmall"
+    ></a>
+    <a
+        class="toggle-sidebar md-cancel"
+        ng-click="theme.mobileAside = !theme.mobileAside"
+    ></a>
+    <div class="user-logged-in">
+        <div class="content">
+            <div class="user-name no-small m-b-5">{{ currentUser.name }}</div>
+            <div class="user-actions row text-center">
+                <div class="col-md-4 p-1">
+                    <a ng-click="updateMyself(null, true)" href="">
+                        <span
+                            >Refresh</span
+                        >
+                    </a>
+                </div>
+                <div class="col-md-4 p-1">
+                    <a ng-click="logout()" href="">
+                        <i class="md md-close"></i>
+                        <span>Logout</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <ul class="menu-links" ng-cloak>
+    <a
+      menu-link
+      ui-sref="home"
+      name="Home"
+    >
+      Home
+    </a>
+    <a
+      menu-link
+      ui-sref="users"
+      name="Users"
+    >
+      Users
+    </a>
+  </ul>
+</aside>

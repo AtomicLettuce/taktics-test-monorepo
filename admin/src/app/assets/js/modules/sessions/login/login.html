@@ -1,0 +1,27 @@
+<div class="card">
+  <div>
+    <div class="brand-logo">
+      <img src="../../../../img/Logotipo.png" />
+    </div>
+
+    <form class="form-floating card-content form-group" ng-submit="vm.doLogin()">
+      <label class="m-b-5">Email</label>
+      <input type="text" class="form-control" ng-model="vm.user.email" />
+
+      <label class="m-b-5">Password</label>
+      <input type="password" class="form-control" ng-model="vm.user.password" />
+      <p class="text-right">
+        <a ui-sref="forgot">Forgot password?</a>
+      </p>
+
+      <div class="checkbox">
+        <label class="m-l-15">
+          <input type="checkbox" ng-model="vm.params.rememberMe" value="true" />
+          <p>Remember me</p>
+        </label>
+      </div>
+
+      <input type="submit" class="btn btn-primary btn-login" value="Log In" />
+    </form>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+@mixin columnDisplayed() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.login,
+.forgot,
+.recover {
+  @include columnDisplayed();
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:url("../img/backgroundLogin.png");
+
+  .card {
+    margin: 0% auto;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    padding-top: 15px;
+
+    .brand-logo img {
+      max-width: 60%;
+      max-height: 150px;
+    }
+
+    .brand-logo.logo-sm img {
+      max-height: 80px;
+    }
+
+    input[type='submit'] {
+      margin: 0 auto;
+      display: block;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+
+@media (max-width: 992px) {
+  .login {
+    background-position: center;
+  }
+}
