@@ -1,0 +1,54 @@
+{
+    "name": "Batch",
+    "base": "PersistedModel",
+    "idInjection": true,
+    "options": {
+        "validateUpsert": true
+    },
+    "replaceOnPUT": false,
+    "mixins": {},
+    "properties": {
+        "rank": {
+            "type": "number"
+        },
+        "description": {
+            "type": "string"
+        },
+        "ammount": {
+            "type": "number"
+        },
+        "materialCostImport": {
+            "type": "number"
+        },
+        "labourCostImport": {
+            "type": "number"
+        },
+        "unitaryCostImport": {
+            "type": "number",
+            "required": false,
+            "default": 0
+        },
+        "totalCostImport": {
+            "type": "number",
+            "required": false,
+            "default": 0
+        },
+        "unitarySaleCost": {
+            "type": "number",
+            "required": false,
+            "default": 0
+        },
+        "totalSaleImport": {
+            "type": "number",
+            "required": false,
+            "default": 0
+        }
+    },
+    "relations": {
+        "chapter": {
+            "type": "belongsTo",
+            "model": "Chapter",
+            "foreignKey": "chapterId"
+        }
+    }
+}
