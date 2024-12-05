@@ -9,7 +9,7 @@ module.exports = function (Budget) {
         if (instance) {
             // instance.totalCostImport = await instance.calculateTotalCostImport();
             const chapters = await Budget.app.models.Chapter.find({
-                where: { budgetId: this.id }
+                where: { budgetId: instance.id}//this.id }
             });
             instance.totalCostImport = chapters.reduce((sum, chapter) => sum + (chapter.totalCostImport || 0), 0);
             instance.totalSaleImport = chapters.reduce((sum, chapter) => sum + (chapter.totalSaleImport || 0), 0);
@@ -26,7 +26,7 @@ module.exports = function (Budget) {
             for (const instance of instances) {
                 // instance.totalCostImport = await instance.calculateTotalCostImport();
                 const chapters = await Budget.app.models.Chapter.find({
-                    where: { budgetId: this.id }
+                    where: { budgetId: instance.id}//this.id }
                 });
                 instance.totalCostImport = chapters.reduce((sum, chapter) => sum + (chapter.totalCostImport || 0), 0);
                 instance.totalSaleImport = chapters.reduce((sum, chapter) => sum + (chapter.totalSaleImport || 0), 0);

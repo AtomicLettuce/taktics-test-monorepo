@@ -1,21 +1,22 @@
 {
   "ids": {
     "User": 1,
-    "AccessToken": 2,
+    "AccessToken": 3,
     "UserCredential": 1,
     "UserIdentity": 1,
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
     "Personnel": 2,
-    "Budget": 2,
-    "Chapter": 3,
-    "Batch": 3
+    "Budget": 9,
+    "Chapter": 4,
+    "Batch": 4
   },
   "models": {
     "User": {},
     "AccessToken": {
-      "huJgisFfquajfqbnyldn99imDNIsgUALNgHZRb88jEFrp2LF9BE7Kyhu8K584Hh1": "{\"id\":\"huJgisFfquajfqbnyldn99imDNIsgUALNgHZRb88jEFrp2LF9BE7Kyhu8K584Hh1\",\"ttl\":1209600,\"created\":\"2024-12-05T10:21:48.070Z\",\"userId\":1}"
+      "huJgisFfquajfqbnyldn99imDNIsgUALNgHZRb88jEFrp2LF9BE7Kyhu8K584Hh1": "{\"id\":\"huJgisFfquajfqbnyldn99imDNIsgUALNgHZRb88jEFrp2LF9BE7Kyhu8K584Hh1\",\"ttl\":1209600,\"created\":\"2024-12-05T10:21:48.070Z\",\"userId\":1}",
+      "Ka0ygyUAxmEMniE0fwBjbJFzhL62i3r5cTnl5z7Si1DqR5Z7Q8yGmjzILad3xpwI": "{\"id\":\"Ka0ygyUAxmEMniE0fwBjbJFzhL62i3r5cTnl5z7Si1DqR5Z7Q8yGmjzILad3xpwI\",\"ttl\":1209600,\"created\":\"2024-12-05T16:19:33.212Z\",\"userId\":1}"
     },
     "UserCredential": {},
     "UserIdentity": {},
@@ -30,11 +31,13 @@
     },
     "Chapter": {
       "1": "{\"rank\":1,\"description\":\"test1\",\"materialSaleCoefficient\":1.5,\"labourSaleCoefficient\":1.6,\"totalCostImport\":11700,\"totalSaleImport\":18110,\"listOfBatches\":[{\"rank\":1,\"description\":\"test\",\"ammount\":10,\"materialCostImport\":10,\"labourCostImport\":50,\"unitaryCostImport\":60,\"totalCostImport\":600,\"unitarySaleCost\":95,\"totalSaleImport\":950,\"id\":1,\"chapterId\":1},{\"rank\":2,\"description\":\"tes2t\",\"ammount\":10,\"materialCostImport\":600,\"labourCostImport\":510,\"unitaryCostImport\":1110,\"totalCostImport\":11100,\"unitarySaleCost\":1716,\"totalSaleImport\":17160,\"id\":2,\"chapterId\":1}],\"budgetId\":1,\"id\":1}",
-      "2": "{\"rank\":21,\"description\":\"tes2\",\"materialSaleCoefficient\":1.75,\"labourSaleCoefficient\":21.6,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[],\"budgetId\":1,\"id\":2}"
+      "2": "{\"rank\":21,\"description\":\"tes2\",\"materialSaleCoefficient\":1.75,\"labourSaleCoefficient\":21.6,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[],\"budgetId\":1,\"id\":2}",
+      "3": "{\"rank\":0,\"description\":\"string\",\"materialSaleCoefficient\":0,\"labourSaleCoefficient\":0,\"budgetId\":8,\"id\":3,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[{\"rank\":1,\"description\":\"string\",\"ammount\":0,\"materialCostImport\":0,\"labourCostImport\":0,\"unitaryCostImport\":0,\"totalCostImport\":0,\"unitarySaleCost\":0,\"totalSaleImport\":0,\"id\":3,\"chapterId\":3}]}"
     },
     "Batch": {
       "1": "{\"rank\":1,\"description\":\"test\",\"ammount\":10,\"materialCostImport\":10,\"labourCostImport\":50,\"unitaryCostImport\":60,\"totalCostImport\":600,\"unitarySaleCost\":95,\"totalSaleImport\":950,\"chapterId\":1,\"id\":1}",
-      "2": "{\"rank\":2,\"description\":\"tes2t\",\"ammount\":10,\"materialCostImport\":600,\"labourCostImport\":510,\"unitaryCostImport\":1110,\"totalCostImport\":11100,\"unitarySaleCost\":1716,\"totalSaleImport\":17160,\"chapterId\":1,\"id\":2}"
+      "2": "{\"rank\":2,\"description\":\"tes2t\",\"ammount\":10,\"materialCostImport\":600,\"labourCostImport\":510,\"unitaryCostImport\":1110,\"totalCostImport\":11100,\"unitarySaleCost\":1716,\"totalSaleImport\":17160,\"chapterId\":1,\"id\":2}",
+      "3": "{\"rank\":1,\"description\":\"string\",\"ammount\":0,\"materialCostImport\":0,\"labourCostImport\":0,\"unitaryCostImport\":0,\"totalCostImport\":0,\"unitarySaleCost\":0,\"totalSaleImport\":0,\"chapterId\":3,\"id\":3}"
     }
   }
 }
