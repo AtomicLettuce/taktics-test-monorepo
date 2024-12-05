@@ -26,7 +26,7 @@
       "1": "{\"name\":\"Juanma\",\"email\":\"jplaza@taktics.net\",\"password\":\"$2a$10$zPsy46zEwjSd62HrI51bGuFaBTx5AsLbeehU7/f/e3xQYxwcO.Rv.\",\"id\":1}"
     },
     "Budget": {
-      "1": "{\"name\":\"test\",\"thumbnail\":\"https://www.google.com/imgres?q=taktics&imgurl=https%3A%2F%2Ftaktics.net%2Fwp-content%2Fuploads%2F2020%2F03%2Flogo-azulFinal.png&imgrefurl=https%3A%2F%2Ftaktics.net%2F&docid=7Jw-YrXsuwLdEM&tbnid=nur6-bbB6_c4JM&vet=12ahUKEwiTrtHGn5CKAxWyVqQEHTNADKIQM3oECBUQAA..i&w=1611&h=255&hcb=2&ved=2ahUKEwiTrtHGn5CKAxWyVqQEHTNADKIQM3oECBUQAA\",\"date\":\"2024-12-05T08:48:06.994Z\",\"clientName\":\"clientest\",\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfChapters\":[{}],\"id\":1}"
+      "1": "{\"name\":\"test\",\"thumbnail\":\"https://taktics.net/wp-content/uploads/2020/03/logo-azulFinal.png\",\"date\":\"2024-12-05T08:48:06.994Z\",\"clientName\":\"clientest\",\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfChapters\":[{}],\"id\":1}"
     },
     "Chapter": {
       "1": "{\"rank\":1,\"description\":\"test1\",\"materialSaleCoefficient\":1.5,\"labourSaleCoefficient\":1.6,\"totalCostImport\":11700,\"totalSaleImport\":18110,\"listOfBatches\":[{\"rank\":1,\"description\":\"test\",\"ammount\":10,\"materialCostImport\":10,\"labourCostImport\":50,\"unitaryCostImport\":60,\"totalCostImport\":600,\"unitarySaleCost\":95,\"totalSaleImport\":950,\"id\":1,\"chapterId\":1},{\"rank\":2,\"description\":\"tes2t\",\"ammount\":10,\"materialCostImport\":600,\"labourCostImport\":510,\"unitaryCostImport\":1110,\"totalCostImport\":11100,\"unitarySaleCost\":1716,\"totalSaleImport\":17160,\"id\":2,\"chapterId\":1}],\"budgetId\":1,\"id\":1}",

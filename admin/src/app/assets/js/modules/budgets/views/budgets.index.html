@@ -1,5 +1,87 @@
+<style>
+  table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+  th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+  }
+  th {
+      background-color: #f4f4f4;
+  }
+  img {
+      max-width: 50px;
+      height: auto;
+  }
+  button {
+      padding: 5px 10px;
+      margin: 2px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+  .edit {
+      background-color: #4CAF50;
+      color: white;
+  }
+  .delete {
+      background-color: #f44336;
+      color: white;
+  }
+  button:hover {
+      opacity: 0.8;
+  }
+</style>
 <section class="forms-basic">
-    <div class="page-header">
-      <h1>Budgets</h1>
+  <div class="page-header">
+    <!-- Show error if loading budgets fails -->
+    <div ng-if="vm.error" class="error-message">
+      {{ vm.error }}
     </div>
+
+    <!-- Display loading indicator -->
+    <div ng-if="!vm.error && vm.budgets.length === 0">
+      Loading budgets...
+    </div>
+
+    <!-- Display budget list -->
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Thumbnail</th>
+          <th>Date</th>
+          <th>Client</th>
+          <th>Total Cost</th>
+          <th>Total Sale</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="budget in vm.budgets">
+          <td>{{ budget.name }}</td>
+          <td><img src= "{{ budget.thumbnail}}" alt="Thumbnail"></td>
+          <td>{{ budget.date}}</td>
+          <td>{{ budget.clientName}}</td>
+          <td>{{ budget.totalCostImport}}</td>
+          <td>{{ budget.totalSaleImport}}</td>
+          <td>
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+        </td>
+        </tr>
+
+
+      </tbody>
+    </table>
+    <!-- <ul>
+      <li ng-repeat="budget in vm.budgets">
+        {{ budget.name }} - {{ budget.thumbnail}} - {{ budget.date}} - {{ budget.clientName}} - {{ budget.totalCostImport}}
+        - {{ budget.totalSaleImport}}
+      </li>
+    </ul> -->
+  </div>
+  </div>
 </section>
