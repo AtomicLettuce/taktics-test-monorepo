@@ -6,6 +6,7 @@ module.exports = function (Batch) {
   Batch.defineProperty('unitarySaleCost', { type: 'number', required: false });
   Batch.defineProperty('totalSaleImport', { type: 'number', required: false });
 
+
   Batch.afterRemote('findById', async function (ctx, instance, next) {
     if (instance) {
 

@@ -211,7 +211,7 @@
           <td>{{ budget.totalCostImport}}</td>
           <td>{{ budget.totalSaleImport}}</td>
           <td>
-            <button class="edit">Edit</button>
+            <button class="edit" ui-sref="budgetDetail({ id: budget.id })">Edit</button>
             <button class="delete" type="button" ng-click="vm.confirmDelete(budget.id)">Delete</button>
           </td>
         </tr>
