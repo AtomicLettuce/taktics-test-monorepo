@@ -1,183 +1,183 @@
 <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-  
-    th,
-    td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: center;
-    }
-  
-    th {
-      background-color: #f4f4f4;
-    }
-  
-    img {
-      max-width: 50px;
-      height: auto;
-    }
-  
-    button {
-      padding: 5px 10px;
-      margin: 2px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-  
-    .edit {
-      background-color: #4CAF50;
-      color: white;
-    }
-  
-    .delete {
-      background-color: #f44336;
-      color: white;
-    }
-  
-    button:hover {
-      opacity: 0.8;
-    }
-  
-    .filter-form {
-      border: 2px solid black;
-      /* Black outline around the form */
-      padding: 15px;
-      margin-bottom: 20px;
-      display: flex;
-      /* Use flexbox for centering */
-      flex-direction: column;
-      /* Stack items vertically */
-      align-items: center;
-      /* Center items horizontally */
-      width: 100%;
-      /* Full width */
-      box-sizing: border-box;
-      /* Include padding in width calculation */
-      background-color: #f9f9f9;
-      /* Optional: light background for contrast */
-    }
-  
-    /* Label and input fields container */
-    .filter-form div {
-      width: 50%;
-      /* Optional: Limit the width of input fields */
-      margin-bottom: 10px;
-      /* Space between input groups */
-      text-align: left;
-      /* Align labels to the left */
-    }
-  
-    /* Label styling */
-    .filter-form label {
-      font-weight: bold;
-      display: block;
-      /* Make labels appear above inputs */
-      margin-bottom: 5px;
-    }
-  
-    /* Input fields styling */
-    .filter-form input {
-      width: 100%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-  
-    /* Button styling */
-    .filter-form button {
-      width: 50%;
-      /* Match the width of the input fields */
-      padding: 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-  
-    .filter-form button:hover {
-      background-color: #0056b3;
-      /* Darker shade on hover */
-    }
-    
-    .confirmation-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
+  img {
+    max-width: 50px;
+    height: auto;
+  }
+
+  table {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    border-collapse: collapse;
   }
-  
-  /* Popup content box */
-  .popup-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
   }
-  
-  .popup-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+
+  th {
+    background-color: #f4f4f4;
   }
-  
-  .popup-content button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 1rem;
+
+  input[type="text"],
+  input[type="number"] {
+    width: 90%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
+  button {
+    padding: 5px 10px;
+    margin: 2px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
   }
-  
-  .popup-content button:first-child {
-    background: red;
+
+  .add-batch {
+    background-color: #007bff;
     color: white;
   }
-  
-  .popup-content button:last-child {
-    background: #ccc;
-    color: black;
+
+  .delete {
+    background-color: #f44336;
+    color: white;
   }
-  
-  .popup-content button:hover {
+
+  .confirm {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  button:hover {
     opacity: 0.8;
   }
-  </style>
+</style>
 
 <div>
-    <h1>Budget Details</h1>
-    <div ng-if="vm.error">
-      <p>Error loading budget details. Please try again later.</p>
-    </div>
-    <div ng-if="!vm.error && vm.budget">
-      <h2>{{ vm.budget.name }}</h2>
-      <p><strong>Client:</strong> {{ vm.budget.clientName }}</p>
-      <p><strong>Date:</strong> {{ vm.budget.date | date:'yyyy-MM-dd' }}</p>
-
-      <h3>Chapters</h3>
-      <ul>
-        <li ng-repeat="chapter in vm.budget.listOfChapters">
-          <strong>{{ chapter.rank }}</strong> - {{ chapter.description}}
-          <ul>
-            <li ng-repeat="batch in chapter.listOfBatches">
-              Batch: {{ batch.rank }}, Description: {{ batch.description}}
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+  <h1>Budget Details</h1>
+  <div ng-if="vm.error">
+    <p>Error loading budget details. Please try again later.</p>
   </div>
+  <div style="border: 2px solid black; padding: 10px;" ng-if="!vm.error && vm.budget">
+    <table>
+      <tr>
+        <th>Thumbnail</th>
+        <th>Client</th>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Total Cost</th>
+        <th>Total Sale</th>
+      </tr>
+      <tr>
+        <td><img src="{{vm.budget.thumbnail}}" alt=" thumbnail"></td>
+        <td>{{vm.budget.clientName}}</td>
+        <td>{{vm.budget.name}}</td>
+        <td>{{ vm.budget.date | date:'yyyy-MM-dd' }}</td>
+        <td>{{vm.budget.totalCostImport}}</td>
+        <td>{{vm.budget.totalSaleImport}}</td>
+      </tr>
+    </table>
+    <button ng-click="vm.showAddChapterForm()">Add Chapter</button>
+  </div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Description</th>
+          <th>Labour Coefficient</th>
+          <th>Material Coefficient</th>
+          <th>Quantity</th>
+          <th>Labour Cost</th>
+          <th>Material Cost</th>
+          <th>Unit Cost</th>
+          <th>Unit Sale</th>
+          <th>Total Cost</th>
+          <th>Total Sale</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-if="vm.showChapterForm">
+          <td><input type="number" ng-model="vm.newChapter.rank" placeholder="Chapter Rank" /></td>
+          <td><input type="text" ng-model="vm.newChapter.description" placeholder="Chapter Description" /></td>
+          <td><input type="number" ng-model="vm.newChapter.labourSaleCoefficient" placeholder="Chapter Description" />
+          </td>
+          <td><input type="number" ng-model="vm.newChapter.materialSaleCoefficient" placeholder="Chapter Description" />
+          </td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <button ng-click="vm.addChapter()">Save Chapter</button>
+            <button ng-click="vm.showChapterForm = false">Cancel</button>
+          </td>
+        </tr>
+        <tr ng-repeat-start="chapter in vm.budget.listOfChapters">
+          <form>
+            <td>{{chapter.rank}}</td>
+            <td><input type="text" name="description" ng-model="chapter.description"></td>
+            <td><input type="number" name="labour_coef" ng-model="chapter.labourSaleCoefficient"></td>
+            <td><input type="number" name="material_coef" ng-model="chapter.materialSaleCoefficient"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{chapter.totalCostImport}}</td>
+            <td>{{chapter.totalSaleImport}}</td>
+            <td>
+              <button type="button" class="add-batch" ng-click="vm.showAddBatchForm(chapter)">Add Batch</button>
+              <button type="button" class="delete" ng-click="vm.deleteChapter(chapter.id)">Delete</button>
+              <button type="submit" class="confirm" ng-click="vm.updateChapter(chapter)">Confirm</button>
+            </td>
+          </form>
+        </tr>
+
+        <tr ng-repeat="batch in chapter.listOfBatches">
+          <form>
+            <td>{{batch.rank}}</td>
+            <td><input type="text" name="description" ng-model="batch.description"></td>
+            <td></td>
+            <td></td>
+            <td><input type="number" name="quantity" ng-model="batch.ammount"></td>
+            <td><input type="number" name="labour_cost" ng-model="batch.labourCostImport"></td>
+            <td><input type="number" name="material_cost" ng-model="batch.materialCostImport"></td>
+            <td>{{batch.unitaryCostImport}}</td>
+            <td>{{batch.unitarySaleCost}}</td>
+            <td>{{batch.totalCostImport}}</td>
+            <td>{{batch.totalSaleImport}}</td>
+            <td>
+              <button type="button" class="delete" ng-click="vm.deleteChapter(batch.id)">Delete</button>
+              <button type="submit" class="confirm" ng-click="vm.updateBatch(batch)">Confirm</button>
+            </td>
+          </form>
+        </tr>
+        <tr ng-if="chapter.showAddBatchForm">
+          <td><input type="number" ng-model="chapter.newBatch.rank" placeholder="Batch Rank" /></td>
+          <td><input type="text" ng-model="chapter.newBatch.description" placeholder="Batch Description" /></td>
+          <td></td>
+          <td></td>
+          <td><input type="number" ng-model="chapter.newBatch.ammount" placeholder="Ammount" /></td>
+          <td><input type="number" name="labour_cost" ng-model="chapter.newBatch.labourCostImport"></td>
+          <td><input type="number" name="material_cost" ng-model="chapter.newBatch.materialCostImport"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>
+            <button ng-click="vm.addBatch(chapter)">Save Batch</button>
+            <button ng-click="chapter.showAddBatchForm = false">Cancel</button>
+          </td>
+        </tr>
+        <tr ng-repeat-end></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
