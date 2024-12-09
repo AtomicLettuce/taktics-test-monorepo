@@ -5,6 +5,8 @@ export default class BudgetsController {
     this.filteredBudgets = [];
     this.error = null;
     this.budgetToDelete = null;
+    this.showBudgetForm=false;
+    this.newBudget={};
 
     // Filter fields
     this.filters = {
@@ -28,6 +30,18 @@ export default class BudgetsController {
         this.error = 'Failed to load budgets. Please try again later.';
       });
   }
+
+  showAddBudgetForm(){
+    this.showBudgetForm = true;
+    this.newBudget = { name: '', thumbnail: '', date: '', clientName: ''};
+  }
+
+  addBudget(){
+    this.showBudgetForm = false;
+    this.BudgetService.addBudget(this.newBudget);
+    this.loadBudgets();
+  }
+
 
   applyFilters() {
     this.filteredBudgets = this.budgets.filter((budget) => {

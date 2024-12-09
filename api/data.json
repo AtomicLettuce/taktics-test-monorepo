@@ -8,9 +8,9 @@
     "RoleMapping": 1,
     "Role": 1,
     "Personnel": 2,
-    "Budget": 12,
-    "Chapter": 18,
-    "Batch": 9
+    "Budget": 30,
+    "Chapter": 28,
+    "Batch": 13
   },
   "models": {
     "User": {},
@@ -28,30 +28,34 @@
     },
     "Budget": {
       "10": "{\"name\":\"test\",\"thumbnail\":\"https://taktics.net/wp-content/uploads/2020/03/logo-azulFinal.png\",\"date\":\"2024-12-05T19:53:59.555Z\",\"clientName\":\"string\",\"id\":10}",
-      "11": "{\"name\":\"stri345345345435ng\",\"thumbnail\":\"string\",\"date\":\"2024-12-06T11:52:47.599Z\",\"clientName\":\"string\",\"id\":11}"
+      "12": "{\"name\":\"spongeggob\",\"thumbnail\":\"https://ultimateguard.com/media/8a/19/c9/1728480928/SQR-050001-277-011-00_dark_0001.jpg?1728480928\",\"date\":\"2024-12-10T23:00:00.000Z\",\"clientName\":\"bobb\",\"id\":12,\"totalCostImport\":16,\"totalSaleImport\":32,\"listOfChapters\":[{\"rank\":0,\"description\":\"\",\"materialSaleCoefficient\":0,\"labourSaleCoefficient\":0,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[],\"id\":19,\"budgetId\":12,\"showAddBatchForm\":false,\"newBatch\":{}},{\"rank\":0,\"description\":\"\",\"materialSaleCoefficient\":0,\"labourSaleCoefficient\":0,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[],\"id\":20,\"budgetId\":12,\"showAddBatchForm\":false,\"newBatch\":{}},{\"rank\":0,\"description\":\"\",\"materialSaleCoefficient\":0,\"labourSaleCoefficient\":0,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[],\"id\":21,\"budgetId\":12,\"showAddBatchForm\":false,\"newBatch\":{}},{\"rank\":0,\"description\":\"\",\"materialSaleCoefficient\":0,\"labourSaleCoefficient\":0,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[],\"id\":22,\"budgetId\":12,\"showAddBatchForm\":false,\"newBatch\":{}},{\"rank\":0,\"description\":\"\",\"materialSaleCoefficient\":0,\"labourSaleCoefficient\":0,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[],\"id\":23,\"budgetId\":12,\"showAddBatchForm\":false,\"newBatch\":{}},{\"rank\":0,\"description\":\"\",\"materialSaleCoefficient\":0,\"labourSaleCoefficient\":0,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[],\"id\":24,\"budgetId\":12,\"showAddBatchForm\":false,\"newBatch\":{}},{\"rank\":0,\"description\":\"\",\"materialSaleCoefficient\":0,\"labourSaleCoefficient\":0,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[],\"id\":25,\"budgetId\":12,\"showAddBatchForm\":false,\"newBatch\":{}},{\"rank\":1,\"description\":\"desc\",\"materialSaleCoefficient\":2,\"labourSaleCoefficient\":2,\"totalCostImport\":16,\"totalSaleImport\":32,\"listOfBatches\":[{\"rank\":1.1,\"description\":\"desc\",\"ammount\":2,\"materialCostImport\":4,\"labourCostImport\":4,\"unitaryCostImport\":8,\"totalCostImport\":16,\"unitarySaleCost\":16,\"totalSaleImport\":32,\"id\":9,\"chapterId\":18}],\"id\":18,\"budgetId\":12,\"showAddBatchForm\":false,\"newBatch\":{}}]}",
+      "29": "{\"name\":\"patrickstar\",\"thumbnail\":\"https://m.media-amazon.com/images/I/51p0AYUCRgL.jpg\",\"date\":\"2024-12-19T23:00:00.000Z\",\"clientName\":\"patrickstarrr\",\"id\":29,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfChapters\":[]}"
     },
     "Chapter": {
       "4": "{\"rank\":1,\"description\":\"string\",\"materialSaleCoefficient\":20,\"labourSaleCoefficient\":41,\"budgetId\":10,\"id\":4,\"totalCostImport\":470,\"totalSaleImport\":14335,\"listOfBatches\":[{\"rank\":0,\"description\":\"string\",\"ammount\":23,\"materialCostImport\":10,\"labourCostImport\":10,\"unitaryCostImport\":20,\"totalCostImport\":460,\"unitarySaleCost\":610,\"totalSaleImport\":14030,\"id\":4,\"chapterId\":4},{\"rank\":0,\"description\":\"sdfsdf\",\"ammount\":5,\"materialCostImport\":1,\"labourCostImport\":1,\"unitaryCostImport\":2,\"totalCostImport\":10,\"unitarySaleCost\":61,\"totalSaleImport\":305,\"id\":7,\"chapterId\":4}]}",
-      "5": "{\"rank\":1,\"description\":\"str435444444ing\",\"materialSaleCoefficient\":20,\"labourSaleCoefficient\":10,\"budgetId\":11,\"id\":5,\"totalCostImport\":4000,\"totalSaleImport\":70000,\"listOfBatches\":[{\"rank\":0,\"description\":\"string\",\"ammount\":100,\"materialCostImport\":30,\"labourCostImport\":10,\"unitaryCostImport\":40,\"totalCostImport\":4000,\"unitarySaleCost\":700,\"totalSaleImport\":70000,\"id\":5,\"chapterId\":5}]}",
       "6": "{\"rank\":1,\"description\":\"teeeeeeeeeest\",\"materialSaleCoefficient\":20,\"labourSaleCoefficient\":10,\"budgetId\":10,\"id\":6,\"totalCostImport\":4000,\"totalSaleImport\":70000,\"listOfBatches\":[{\"rank\":10,\"description\":\"saaaaaaaaaaaaaatesttring\",\"ammount\":100,\"materialCostImport\":30,\"labourCostImport\":10,\"unitaryCostImport\":40,\"totalCostImport\":4000,\"unitarySaleCost\":700,\"totalSaleImport\":70000,\"id\":6,\"chapterId\":6}]}",
       "7": "{\"id\":7,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[]}",
       "8": "{\"id\":8,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[]}",
       "9": "{\"id\":9,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[]}",
       "10": "{\"id\":10,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[]}",
       "11": "{\"id\":11,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[]}",
-      "12": "{\"rank\":2,\"description\":\"eskeler\",\"materialSaleCoefficient\":2,\"labourSaleCoefficient\":1,\"id\":12,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[]}",
       "13": "{\"rank\":2,\"description\":\"eskeler\",\"materialSaleCoefficient\":1,\"labourSaleCoefficient\":2,\"budgetId\":10,\"id\":13,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[]}",
       "14": "{\"rank\":88,\"description\":\"rasasras\",\"materialSaleCoefficient\":2,\"labourSaleCoefficient\":2,\"budgetId\":10,\"id\":14,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[]}",
       "15": "{\"rank\":4,\"description\":\"sdf\",\"materialSaleCoefficient\":9,\"labourSaleCoefficient\":1,\"budgetId\":10,\"id\":15,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[]}",
       "16": "{\"rank\":99,\"description\":\"sdfffffffff\",\"materialSaleCoefficient\":1,\"labourSaleCoefficient\":1,\"budgetId\":10,\"id\":16,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[]}",
-      "17": "{\"rank\":140,\"description\":\"aaaaaaaaaaa\",\"materialSaleCoefficient\":2,\"labourSaleCoefficient\":4,\"budgetId\":10,\"id\":17,\"totalCostImport\":4,\"totalSaleImport\":12,\"listOfBatches\":[{\"rank\":140.1,\"description\":\"aaaaaaaaaaaasdsadasd\",\"ammount\":2,\"materialCostImport\":1,\"labourCostImport\":1,\"unitaryCostImport\":2,\"totalCostImport\":4,\"unitarySaleCost\":6,\"totalSaleImport\":12,\"id\":8,\"chapterId\":17}]}"
+      "17": "{\"rank\":140,\"description\":\"aaaaaaaaaaa\",\"materialSaleCoefficient\":2,\"labourSaleCoefficient\":4,\"budgetId\":10,\"id\":17,\"totalCostImport\":4,\"totalSaleImport\":12,\"listOfBatches\":[{\"rank\":140.1,\"description\":\"aaaaaaaaaaaasdsadasd\",\"ammount\":2,\"materialCostImport\":1,\"labourCostImport\":1,\"unitaryCostImport\":2,\"totalCostImport\":4,\"unitarySaleCost\":6,\"totalSaleImport\":12,\"id\":8,\"chapterId\":17}]}",
+      "18": "{\"rank\":1,\"description\":\"desc\",\"materialSaleCoefficient\":2,\"labourSaleCoefficient\":2,\"budgetId\":12,\"id\":18,\"totalCostImport\":36,\"totalSaleImport\":72,\"listOfBatches\":[{\"rank\":1.1,\"description\":\"desc\",\"ammount\":2,\"materialCostImport\":4,\"labourCostImport\":4,\"unitaryCostImport\":8,\"totalCostImport\":16,\"unitarySaleCost\":16,\"totalSaleImport\":32,\"id\":9,\"chapterId\":18},{\"rank\":1.2,\"description\":\"dddesc\",\"ammount\":2,\"materialCostImport\":2,\"labourCostImport\":8,\"unitaryCostImport\":10,\"totalCostImport\":20,\"unitarySaleCost\":20,\"totalSaleImport\":40,\"id\":10,\"chapterId\":18}]}",
+      "26": "{\"rank\":2,\"description\":\"2desc\",\"materialSaleCoefficient\":6,\"labourSaleCoefficient\":1,\"budgetId\":12,\"id\":26,\"totalCostImport\":0,\"totalSaleImport\":0,\"listOfBatches\":[]}",
+      "27": "{\"rank\":1,\"description\":\"edsc\",\"materialSaleCoefficient\":5,\"labourSaleCoefficient\":1,\"budgetId\":29,\"id\":27,\"totalCostImport\":288,\"totalSaleImport\":864,\"listOfBatches\":[{\"rank\":1.1,\"description\":\"desc\",\"ammount\":12,\"materialCostImport\":12,\"labourCostImport\":12,\"unitaryCostImport\":24,\"totalCostImport\":288,\"unitarySaleCost\":72,\"totalSaleImport\":864,\"id\":11,\"chapterId\":27}]}"
     },
     "Batch": {
       "4": "{\"rank\":0,\"description\":\"string\",\"ammount\":23,\"materialCostImport\":10,\"labourCostImport\":10,\"chapterId\":4,\"id\":4,\"unitaryCostImport\":20,\"totalCostImport\":460,\"unitarySaleCost\":610,\"totalSaleImport\":14030}",
-      "5": "{\"rank\":0,\"description\":\"string\",\"ammount\":100,\"materialCostImport\":30,\"labourCostImport\":10,\"chapterId\":5,\"id\":5,\"unitaryCostImport\":40,\"totalCostImport\":4000,\"unitarySaleCost\":700,\"totalSaleImport\":70000}",
       "6": "{\"rank\":10,\"description\":\"saaaaaaaaaaaaaatesttring\",\"ammount\":100,\"materialCostImport\":30,\"labourCostImport\":10,\"chapterId\":6,\"id\":6,\"unitaryCostImport\":40,\"totalCostImport\":4000,\"unitarySaleCost\":700,\"totalSaleImport\":70000}",
       "7": "{\"rank\":0,\"description\":\"sdfsdf\",\"ammount\":5,\"materialCostImport\":1,\"labourCostImport\":1,\"chapterId\":4,\"id\":7,\"unitaryCostImport\":2,\"totalCostImport\":10,\"unitarySaleCost\":61,\"totalSaleImport\":305}",
-      "8": "{\"rank\":140.1,\"description\":\"aaaaaaaaaaaasdsadasd\",\"ammount\":2,\"materialCostImport\":1,\"labourCostImport\":1,\"chapterId\":17,\"id\":8,\"unitaryCostImport\":2,\"totalCostImport\":4,\"unitarySaleCost\":6,\"totalSaleImport\":12}"
+      "8": "{\"rank\":140.1,\"description\":\"aaaaaaaaaaaasdsadasd\",\"ammount\":2,\"materialCostImport\":1,\"labourCostImport\":1,\"chapterId\":17,\"id\":8,\"unitaryCostImport\":2,\"totalCostImport\":4,\"unitarySaleCost\":6,\"totalSaleImport\":12}",
+      "9": "{\"rank\":1.1,\"description\":\"desc\",\"ammount\":2,\"materialCostImport\":4,\"labourCostImport\":4,\"chapterId\":18,\"id\":9,\"unitaryCostImport\":8,\"totalCostImport\":16,\"unitarySaleCost\":16,\"totalSaleImport\":32}",
+      "10": "{\"rank\":1.2,\"description\":\"dddesc\",\"ammount\":2,\"materialCostImport\":2,\"labourCostImport\":8,\"chapterId\":18,\"id\":10,\"unitaryCostImport\":10,\"totalCostImport\":20,\"unitarySaleCost\":20,\"totalSaleImport\":40}",
+      "11": "{\"rank\":1.1,\"description\":\"desc\",\"ammount\":12,\"materialCostImport\":12,\"labourCostImport\":12,\"chapterId\":27,\"id\":11,\"unitaryCostImport\":24,\"totalCostImport\":288,\"unitarySaleCost\":72,\"totalSaleImport\":864}"
     }
   }
 }

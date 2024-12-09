@@ -6,6 +6,8 @@ export default class BudgetsController {
         this.newChapter = null;
         this.showChapterForm = false;
         this.loadBudgetDetails();
+        this.showEditBudget = false;
+        this.newDetails = null;
     }
 
 
@@ -14,6 +16,7 @@ export default class BudgetsController {
         this.BudgetService.getBudget(this.budgetId)
             .then((response) => {
                 this.budget = response.data;
+                this.newDetails = this.budget;
                 if (this.budget.listOfChapters) {
                     this.budget.listOfChapters.forEach(chapter => {
                         chapter.showAddBatchForm = false;
@@ -52,7 +55,7 @@ export default class BudgetsController {
 
 
     updateBatch(batch) {
-        this.BudgetService.updateBatch(batch).then(() => { this.loadBudgetDetails(); })
+        this.BudgetService.updateBatch(batch);
         this.loadBudgetDetails();
     }
 
@@ -80,6 +83,18 @@ export default class BudgetsController {
     addChapter() {
         this.showChapterForm = false;
         this.BudgetService.addChapter(this.newChapter)
+        this.loadBudgetDetails();
+    }
+
+    showEditDetailsForm() {
+        this.showEditBudget = true;
+        this.newDetails = this.budget;
+    }
+
+    editDetails() {
+        this.showEditBudget = false;
+        console.log(this.newDetails);
+        this.BudgetService.editBudgetDetails(this.newDetails);
         this.loadBudgetDetails();
     }
 

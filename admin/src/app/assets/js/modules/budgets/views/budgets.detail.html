@@ -78,7 +78,20 @@
         <td>{{vm.budget.totalCostImport}}</td>
         <td>{{vm.budget.totalSaleImport}}</td>
       </tr>
+      <tr ng-if="vm.showEditBudget">
+        <td><input type="text" ng-model="vm.newDetails.thumbnail" placeholder="Image URL"/></td>
+        <td><input type="text" ng-model="vm.newDetails.clientName" placeholder="Client Name" /></td>
+        <td><input type="text" ng-model="vm.newDetails.name" placeholder="Budget Name"/></td>
+        <td><input type="date" ng-model="vm.newDetails.date" placeholder="Date" /></td>
+        <td>{{vm.budget.totalCostImport}}</td>
+        <td>{{vm.budget.totalSaleImport}}</td>
+        <td>
+          <button ng-click="vm.editDetails()">Save Info.</button>
+          <button ng-click="vm.showEditBudget = false">Cancel</button>
+        </td>
+      </tr>
     </table>
+    <button ng-click="vm.showEditDetailsForm()">Edit Info.</button>
     <button ng-click="vm.showAddChapterForm()">Add Chapter</button>
   </div>
   <div>
@@ -154,7 +167,7 @@
             <td>{{batch.totalCostImport}}</td>
             <td>{{batch.totalSaleImport}}</td>
             <td>
-              <button type="button" class="delete" ng-click="vm.deleteChapter(batch.id)">Delete</button>
+              <button type="button" class="delete" ng-click="vm.deleteBatch(batch.id)">Delete</button>
               <button type="submit" class="confirm" ng-click="vm.updateBatch(batch)">Confirm</button>
             </td>
           </form>

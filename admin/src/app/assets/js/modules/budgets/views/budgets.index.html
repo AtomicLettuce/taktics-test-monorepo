@@ -105,78 +105,83 @@
     background-color: #0056b3;
     /* Darker shade on hover */
   }
-  
+
   .confirmation-popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
 
-/* Popup content box */
-.popup-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 300px;
-}
+  /* Popup content box */
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+  }
 
-.popup-content p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
+  .popup-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
 
-.popup-content button {
-  margin: 0 10px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+  .popup-content button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 
-.popup-content button:first-child {
-  background: red;
-  color: white;
-}
+  .popup-content button:first-child {
+    background: red;
+    color: white;
+  }
 
-.popup-content button:last-child {
-  background: #ccc;
-  color: black;
-}
+  .popup-content button:last-child {
+    background: #ccc;
+    color: black;
+  }
 
-.popup-content button:hover {
-  opacity: 0.8;
-}
+  .popup-content button:hover {
+    opacity: 0.8;
+  }
 </style>
 <section class="forms-basic">
-  <form class="filter-form" ng-submit="$event.preventDefault(); vm.applyFilters();">
-    <div>
-      <label for="client">Client:</label>
-      <input type="text" id="client" ng-model="vm.filters.client" placeholder="Client name" />
-    </div>
-    <div>
-      <label for="name">Name:</label>
-      <input type="text" id="name" ng-model="vm.filters.name" placeholder="Budget name" />
-    </div>
-    <div>
-      <label for="dateFrom">Date From:</label>
-      <input type="date" id="dateFrom" ng-model="vm.filters.dateFrom" />
-    </div>
-    <div>
-      <label for="dateTo">Date To:</label>
-      <input type="date" id="dateTo" ng-model="vm.filters.dateTo" />
-    </div>
-    <button type="button" ng-click="vm.applyFilters()">Filter</button>
-  </form>
+  <div style="border: 2px solid black; padding: 10px;">
+    <form class="filter-form" ng-submit="$event.preventDefault(); vm.applyFilters();">
+      <div>
+        <label for="client">Client:</label>
+        <input type="text" id="client" ng-model="vm.filters.client" placeholder="Client name" />
+      </div>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" ng-model="vm.filters.name" placeholder="Budget name" />
+      </div>
+      <div>
+        <label for="dateFrom">Date From:</label>
+        <input type="date" id="dateFrom" ng-model="vm.filters.dateFrom" />
+      </div>
+      <div>
+        <label for="dateTo">Date To:</label>
+        <input type="date" id="dateTo" ng-model="vm.filters.dateTo" />
+      </div>
+      <button type="button" ng-click="vm.applyFilters()">Filter</button>
+    </form>
+    <button style="border: 2px solid black; padding: 10px;" ng-click="vm.showAddBudgetForm()">Create</button>
+  </div>
+
 
   <div class="page-header">
     <!-- Show error if loading budgets fails -->
@@ -203,10 +208,23 @@
         </tr>
       </thead>
       <tbody>
+        <tr ng-if="vm.showBudgetForm">
+          <td><input type="text" ng-model="vm.newBudget.name" placeholder="Name" /></td>
+          <td><input type="text" ng-model="vm.newBudget.thumbnail" placeholder="Image URL" /></td>
+          <td><input type="date" ng-model="vm.newBudget.date" placeholder="Date" /></td>
+          <td><input type="text" ng-model="vm.newBudget.clientName" placeholder="Client Name" /></td>
+          <td></td>
+          <td></td>
+          <td>
+            <button ng-click="vm.addBudget()">Save Budget</button>
+            <button ng-click="vm.showBudgetForm = false">Cancel</button>
+          </td>
+        </tr>
+
         <tr ng-repeat="budget in vm.filteredBudgets">
           <td>{{ budget.name }}</td>
           <td><img src="{{budget.thumbnail}}" alt="Thumbnail"></td>
-          <td>{{ budget.date}}</td>
+          <td>{{ budget.date | date:'yyyy-MM-dd' }}</td>
           <td>{{ budget.clientName}}</td>
           <td>{{ budget.totalCostImport}}</td>
           <td>{{ budget.totalSaleImport}}</td>
